@@ -1,0 +1,475 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+/* roboto-italic - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Roboto Italic'), local('Roboto-Italic'),
+         url('../fonts/roboto-v18-latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v18-latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-900 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black'),
+         url('../fonts/roboto-v18-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v18-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* roboto-900italic - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Roboto Black Italic'), local('Roboto-BlackItalic'),
+         url('../fonts/roboto-v18-latin-900italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto-v18-latin-900italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  html {
+    scroll-behavior: smooth
+  }
+  /* ==========================================================================
+   pre-loader
+========================================================================== */
+a #alexandra{
+  background: url(../medias/pastilles/alexandra.png) no-repeat -9999px -9999px;
+}
+a #anais{
+  background: url(../medias/pastilles/anais.png) no-repeat -9999px -9999px;
+}
+a #blandine{
+  background: url(../medias/pastilles/blandine.png) no-repeat -9999px -9999px;
+}
+a #camille{
+  background: url(../medias/pastilles/camille.png) no-repeat -9999px -9999px;
+}
+a #celine{
+  background: url(../medias/pastilles/celine.png) no-repeat -9999px -9999px;
+}
+a #cynthia{
+  background: url(../medias/pastilles/cynthia.png) no-repeat -9999px -9999px;
+}
+a #harmony{
+  background: url(../medias/pastilles/harmony.png) no-repeat -9999px -9999px;
+}
+a #katia{
+  background: url(../medias/pastilles/katia.png) no-repeat -9999px -9999px;
+}
+a #lidye{
+  background: url(../medias/pastilles/lidye.png) no-repeat -9999px -9999px;
+}
+a #marjorie{
+  background: url(../medias/pastilles/Marjorie.png) no-repeat -9999px -9999px;
+}
+a #melissa{
+  background: url(../medias/pastilles/Melissa.png) no-repeat -9999px -9999px;
+}
+a #sarah{
+  background: url(../medias/pastilles/Sarah.png) no-repeat -9999px -9999px;
+}
+  /* ==========================================================================
+   Colors
+========================================================================== */
+
+.orange-txt {
+    color: #f47216;
+}
+.blue-txt {
+  color: #1082ce;
+}
+.green-txt {
+  color: #00a650;
+}
+.yellow-txt {
+  color: #fcd205;
+}
+.gris-light {
+  color: #cacac8;
+}
+.gris-dark {
+  color:#8a8988;
+}
+/* ==========================================================================
+   Layout
+========================================================================== */
+body, main {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #000;
+    overflow-x: hidden;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+.wrapped {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 15px;
+}
+/* ==========================================================================
+   Menu
+========================================================================== */
+nav {
+    height: 0;
+}
+#nav-container {
+    height: 12vh;
+}
+a {
+  text-decoration: none;
+  color: black;   
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #8A8988;
+}
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #000000;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #000000;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #FFFFFF;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+.button-image{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 100%;
+}
+.intro-img {
+  max-width: 80vw;
+}
+/* ==========================================================================
+   Map
+========================================================================== */
+#map-container {
+
+    background-image: url('../medias/carte-metro-mobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.femme {
+  cursor: pointer;
+  stroke-width: 0;
+  clear: both;
+  z-index: 111;
+}
+#text_blandine {
+
+}
+/* .femme:hover {
+  stroke: #cacac8;
+  stroke-width: 15px;
+} */
+svg {
+    height: 85vh;
+    max-width: 165vw;
+    z-index: 100;
+    position: relative;
+    top: -25vh;
+    right: 150px;
+}
+
+.popover {
+  border: none;
+  background-color: transparent;
+  max-width: 300px;
+}
+.popover h1 {
+  font-size: 2em;
+  line-break: 1em;
+  margin: 0;
+  color: #FFFFFF;
+}
+.popover p {
+  font-size: 1em;
+  line-break: 0.8em;
+  margin: 0;
+  color: #FFFFFF;
+  font-weight: 900;
+}
+.invisible-fff {
+  visibility: visible;
+  fill-opacity: 1;
+
+}
+#map-logo {
+  display: block;
+  position: relative;
+  top: 30px;
+  right: -65vw;
+  height: 80px;
+}
+#map-sharebox {
+  width: 33vw;
+  max-height: 25vh;
+  position: relative;
+  top: 75vh;
+  margin-right: 40px;
+}
+#map-sharebox * {
+  margin-bottom: 0;
+  float: right;
+  padding: 1px;
+}
+/* ==========================================================================
+   Article
+========================================================================== */
+.metro-video {
+  width: 100vw;
+  height: 56vw;
+  z-index: 1;
+}
+.content {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+article {
+  background:  url(../medias/Bg1.png) no-repeat center center fixed; 
+  background-size: cover;
+}
+article p {
+  font-weight: 400;
+  font-size: 1.1em;
+  background-color: #FFFFFF;
+}
+h1 {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-size: 3em;
+  line-height: 1em;
+}
+h2 {
+  font-weight: 900;
+}
+.date {
+  font-weight: 200;
+  color: #cacac8;
+  font-weight: 400;
+  margin-bottom: 0;
+  font-size: 1.1em;
+  line-height: 1em;
+
+}
+.lieu {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin-bottom: 0;
+}
+.nom {
+  margin-bottom: 3px;
+  font-size: 1.4em;
+}
+.portrait {
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.quote {
+  max-width: 100%;
+}
+.btn-box {
+  margin: auto;
+  max-width: fit-content;
+}
+.color {
+  font-weight: 900;
+}
+.bleu h1,.bleu h2,.bleu .color {
+  color: #1082ce;
+}
+.orange h1,.orange h2,.orange .color {
+  color: #f47216;
+}
+.green h1,.green h2,.green .color{
+color: #00a650;
+}
+.yellow h1,.yellow h2,.yellow .color{
+color: #fcd205;
+}
+.social { 
+  display: none;
+}
+#bg-merci {
+  background-image: url(../medias/lignes-merci-page.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+text {
+  fill-opacity: 1;
+}
+
+@media only screen and (min-width: 992px) {
+  /* Style adjustments for viewports that meet the condition */
+  .wrapped {
+    margin: 0;
+    padding: 0;
+  }
+  .invisible-fff {
+    /* visibility: hidden; */
+    fill-opacity: 0;
+    animation: appear 1s ease;
+  }
+  @keyframes appear {
+    0% { opacity: 0;}
+    10% { opacity: 0.1;}
+    90% { opacity: 0.9;}
+    100% {opacity: 1;}
+    
+  }
+  .intro {
+    background-image: url(../medias/entete-large.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    height: 100vh;
+  }
+  #intro-text {
+    color: #FFFFFF;
+    font-size: 1.2em;
+    margin-top: 40px;
+    line-height: 1em;
+  }
+  .button-image {
+    max-width: 100%;
+  }
+  #map-logo {
+    right: -85vw;
+  }
+  svg {
+    max-height: 100vh;
+    max-width: 100vw;
+    z-index: -1;
+    height: auto;
+    position: unset;
+
+  }
+  .content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  article p {
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .date {
+    font-size: 1.8em;
+    line-height: 1em;
+  
+  }
+  .lieu {
+    font-size: 2.5em;
+    margin-bottom: 0;
+  }
+  .nom {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  /* Style adjustments for viewports that meet the condition */
+
+  
+}
+
