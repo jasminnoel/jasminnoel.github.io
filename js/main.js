@@ -19,7 +19,7 @@ $(document).ready(function(){
             var e = $(this);
             e.popover({
                 html: true,
-                boundary: $('#map-container'),
+                boundary: $('body'),
                 trigger: 'focus',
                 container: 'body'
             }); 
