@@ -228,6 +228,10 @@ a:hover {
     margin-top: 20px;
     margin-bottom: 40px;
     max-width: 100%;
+    transition: all .2s ease-in-out;
+}
+.button-image:hover{
+  transform: scale(1.1);
 }
 .intro-img {
   max-width: 80vw;
@@ -250,13 +254,7 @@ a:hover {
   clear: both;
   z-index: 111;
 }
-#text_blandine {
 
-}
-/* .femme:hover {
-  stroke: #cacac8;
-  stroke-width: 15px;
-} */
 svg {
     height: 85vh;
     max-width: 165vw;
@@ -338,6 +336,15 @@ h1 {
 h2 {
   font-weight: 900;
 }
+h3 {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+h4 {
+  font-weight: 900;
+  font-size: 1.2em;
+}
+
 .date {
   font-weight: 200;
   color: #cacac8;
@@ -386,13 +393,13 @@ color: #fcd205;
 .social { 
   display: none;
 }
-#bg-merci {
-  background-image: url(../medias/lignes-merci-page.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 text {
   fill-opacity: 1;
+}
+#merci-logo {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -422,7 +429,7 @@ text {
   }
   #intro-text {
     color: #FFFFFF;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-top: 40px;
     line-height: 1em;
   }
