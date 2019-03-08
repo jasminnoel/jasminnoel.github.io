@@ -231,7 +231,7 @@ a:hover {
     transition: all .2s ease-in-out;
 }
 .button-image:hover{
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 .intro-img {
   max-width: 80vw;
@@ -318,10 +318,7 @@ svg {
   margin-left: 1vw;
   margin-right: 1vw;
 }
-article {
-  background:  url(../medias/Bg1.png) no-repeat center center fixed; 
-  background-size: cover;
-}
+
 article p {
   font-weight: 400;
   font-size: 1.1em;
@@ -431,7 +428,7 @@ text {
     color: #FFFFFF;
     font-size: 1em;
     margin-top: 40px;
-    line-height: 1em;
+    line-height: 1.2em;
   }
   .button-image {
     max-width: 100%;
