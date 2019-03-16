@@ -1,7 +1,15 @@
 /* ==========================================================================
    Fonts
    ========================================================================== */
-/* roboto-italic - latin */
+   @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto'), local('Roboto--Light'),
+         url('../fonts/Roboto-Light.ttf') format('ttf'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  }
+
+   /* roboto-italic - latin */
 @font-face {
     font-family: 'Roboto';
     font-style: italic;
@@ -328,10 +336,11 @@ h1 {
   font-family: 'Roboto';
   font-weight: 900;
   font-size: 3em;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 h2 {
   font-weight: 900;
+  font-size: 1.6em;
 }
 h3 {
   font-weight: 900;
@@ -352,7 +361,7 @@ h4 {
 
 }
 .lieu {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.4em;
   margin-bottom: 0;
 }
@@ -397,9 +406,20 @@ text {
   position: absolute;
   top: 40px;
   right: 40px;
+
+}
+#merci-logo img {
+  height: 80px;
 }
 .text-center { 
   display: none;
+}
+.merci-txt {
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.about-row {
+  margin-top: 100px;
 }
 
 @media only screen and (min-width: 992px) {
@@ -457,10 +477,10 @@ text {
     margin-bottom: 25px;
   }
   h1 {
-    font-size: 4em;
+    font-size: 5em;
   }
   .date {
-    font-size: 1.8em;
+    font-size: 1.4em;
     line-height: 1em;
   
   }
