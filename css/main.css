@@ -143,7 +143,11 @@ a {
   transition: color 0.3s ease;
 }
 a:hover {
-  color: #8A8988;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.active {
+  color: #FFFFFF
 }
 #menuToggle {
   display: block;
@@ -210,11 +214,12 @@ a:hover {
 #menu {
   position: absolute;
   width: 300px;
+  height: 110vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
   
-  background: #FFFFFF;
+  background: #cacac8;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -420,6 +425,7 @@ text {
 .about-row {
   margin-top: 100px;
 }
+
 
 @media only screen and (min-width: 992px) {
   /* Style adjustments for viewports that meet the condition */
